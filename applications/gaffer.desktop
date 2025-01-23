@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Gaffer
+Exec=/opt/gaffer/bin/gaffer %f
+Icon=
+Terminal=false
+Type=Application
+PrefersNonDefaultGPU=true
+X-KDE-RunOnDiscreteGpu=true

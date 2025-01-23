@@ -1,0 +1,4 @@
+*.pyc
+*/__pycache__/
+.browser/jco/cache/
+.browser/artflow/cache/

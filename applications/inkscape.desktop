@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Inkscape
+Exec=/opt/appimages/inkscape.appimage %f
+Icon=/home/mats/.local/share/applications/inkscape.svg
+Terminal=false
+Type=Application
+PrefersNonDefaultGPU=true
+X-KDE-RunOnDiscreteGpu=true

@@ -1,0 +1,17 @@
+Xft.dpi: 96
+
+! These might also be useful depending on your monitor and personal preference:
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+! Xcursor.theme: XCursor-Pro-Dark
+! Xcursor.size: 64
+
+! nsxiv config
+Nsxiv.window.background: #000000
+Nsxiv.window.foreground: #00C0FF
+! Sxiv.font: Hack-9

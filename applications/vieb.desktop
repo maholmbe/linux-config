@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Vieb
+Exec=/opt/appimages/Vieb-12.0.0.AppImage %f
+Terminal=false
+Type=Application

@@ -1,0 +1,8 @@
+myTerm = "kitty"
+myBrowser = "qutebrowser"
+myFileManager = "kitty -e nnn -de"
+myMarkdown = "kitty -e nvim"
+myMusicPlayer = "spotify"
+myOfficeSuite = "desktopeditors"
+myPDFReader = "zathura"
+myTextEditor = "kitty -e nvim"

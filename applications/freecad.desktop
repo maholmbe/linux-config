@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=FreeCAD appimage
+Exec=/opt/appimages/freecad.appimage %f
+Icon=/home/mats/.local/share/applications/freecad.svg
+Terminal=false
+Type=Application
+PrefersNonDefaultGPU=true
+X-KDE-RunOnDiscreteGpu=true

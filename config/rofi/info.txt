@@ -1,0 +1,7 @@
+The theme is defined in ~/.config/rofi/config.rasi and the theme file is in ~/.config/rofi/theme.
+
+You can also install themes to ~/.local/share/rofi/themes/
+
+You can for example link the rofi-themes-collection repository directly to ~/.local/share/rofi/themes/ and use rofi-theme-selector to choose desired theme.
+
+https://github.com/newmanls/rofi-themes-collection

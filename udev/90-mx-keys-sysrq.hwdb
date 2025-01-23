@@ -1,0 +1,2 @@
+evdev:input:b0003*
+ KEYBOARD_KEY_70049=sysrq

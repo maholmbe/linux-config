@@ -1,0 +1,6 @@
+nvidia_drm.modeset=1
+nvidia.NVreg_PreserveVideoMemoryAllocations=1
+acpi_backlight=nvidia_wmi_ec
+sysrq_always_enabled=1
+quiet
+rw

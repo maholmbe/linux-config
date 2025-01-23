@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Krita
+Exec=/opt/appimages/krita.appimage %f
+Terminal=false
+Type=Application
+PrefersNonDefaultGPU=true
+X-KDE-RunOnDiscreteGpu=true

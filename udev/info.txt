@@ -1,0 +1,6 @@
+Move the hwdb file to /etc/udev/hwdb.d/
+
+check event path and keycodes with 'sudo evtest'
+
+sudo systemd-hwdb update
+sudo udevadm trigger /dev/input/event* (or the appropriate event path, eg. /dev/input/event22)
