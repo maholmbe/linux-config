@@ -8,7 +8,6 @@ numlockx on
 picom -b
 nitrogen --restore 
 dunst &
-#nm-applet &
 flameshot &
 #blueman-applet &
 #kdeconnect-indicator &
@@ -20,6 +19,7 @@ solaar --window hide &
 #aw-qt &    <--ActivityWatch
 qutebrowser &
 syncthing &
+nm-applet &
 #syncthingtray &
 # wal -i ~/git-repos/dotfiles/wallpapers/legion
 # wal -R
