@@ -10,3 +10,4 @@ x-scheme-handler/unknown=org.qutebrowser.qutebrowser.desktop
 x-scheme-handler/postman=Postman.desktop
 image/png=nsxiv.desktop
 image/jpg=nsxiv.desktop
+image/jpeg=nsxiv.desktop
