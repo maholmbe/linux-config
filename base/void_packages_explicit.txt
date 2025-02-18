@@ -3,6 +3,7 @@
 Clipboard
 CopyQ
 ImageMagick
+NetworkManager
 Solaar
 adwaita-qt6
 aerc
@@ -21,7 +22,8 @@ btop
 cmake
 dante
 ddclient
-discord
+docker
+docker-compose
 dotool
 dragon
 dunst
@@ -47,6 +49,7 @@ gnome-boxes
 grub-x86_64-efi
 hdparm
 jq
+kanshi
 lazygit
 lbzip2
 libX11-devel
@@ -58,19 +61,25 @@ libXxf86vm-devel
 libglvnd
 libspa-bluetooth
 libvirt
+libwebp-tools
 libxkbcommon-devel
+lychee
 mpv
 ncurses-libtinfo-libs
 neovim
 nerd-fonts
+network-manager-applet
 nfs-utils
 nitrogen
+nmap
 nnn
 nsxiv
 ntp
 numlockx
 nvidia
+nvidia-docker
 nvidia-opencl
+nvidia-vaapi-driver
 openimagedenoise
 openimageio
 papirus-icon-theme
@@ -87,6 +96,7 @@ python3-adblock
 python3-dbus-next
 qalculate-gtk
 qt-sudo
+qt6-wayland
 qt6ct
 qtile
 qtile-wayland
@@ -94,6 +104,7 @@ qutebrowser
 rbw
 rclone
 ripgrep
+river
 rofi
 rofi-rbw
 scons
