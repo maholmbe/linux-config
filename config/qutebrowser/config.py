@@ -2410,6 +2410,7 @@ config.bind("<Alt-c>", "set-cmd-text -s :spawn --userscript container-open")
 config.bind("<Alt-f>", "hint links userscript container-open")
 config.bind("<Alt-f>", "hint links userscript container-open")
 config.bind(",b", "spawn --userscript qute-bitwarden --totp")
+config.bind(',t', 'config-cycle tabs.show never always')
 
 ## Bindings for caret mode
 # config.bind('$', 'move-to-end-of-line', mode='caret')

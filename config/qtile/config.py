@@ -201,7 +201,7 @@ widgets_primary = [
     
     widget.CurrentLayoutIcon(**widget_defaults),
     widget.CurrentLayout(**widget_defaults),
-    widget.GroupBox(highlight_method="block", **widget_defaults),
+    widget.GroupBox(disable_drag=True, highlight_method="block", **widget_defaults),
     widget.TaskList(borderwidth=1, **widget_defaults),
 #    widget.Chord(
 #        chords_colors={

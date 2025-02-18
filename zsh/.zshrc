@@ -10,7 +10,7 @@ bindkey -e
 source ~/.ssh/ssh-agent-env
 
 # Aliases
-alias ls='ls -l'
+alias ls='ls -l --color'
 #alias cp='rsync -ah --info=progress2'
 
 # The following lines were added by compinstall
