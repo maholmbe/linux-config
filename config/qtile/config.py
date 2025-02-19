@@ -136,10 +136,10 @@ keys = [
 groups = [
     Group("1", layout="max", matches=[Match(wm_class=["firefox", "vivaldi-stable", "qutebrowser"])]),
     Group("2", layout="bsp", matches=[Match(wm_class=["Spotify", "Slack"])]),
-    Group("3", layout="max", spawn=["wezterm -e aerc"]),
-    Group("4", layout="bsp", spawn=["wezterm -e yazi"]),
+    Group("3", layout="max", spawn=["ghostty -e aerc"]),
+    Group("4", layout="bsp", spawn=["ghostty -e yazi"]),
     Group("5", layout="bsp"),
-    Group("6", layout="bsp", spawn=["wezterm"]),
+    Group("6", layout="bsp", spawn=["ghostty"]),
     Group("7", layout="bsp", matches=[Match(wm_class=["Inkscape", "krita", "Gimp-2.10"])]),
     Group("8", layout="bsp", matches=[Match(wm_class=["FreeCAD", "Blender"])]),
     Group("9", layout="bsp", matches=[Match(title=["Fusion Studio"])]),
