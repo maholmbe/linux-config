@@ -1,7 +1,14 @@
+#theme = Kanagawa Wave 
+#theme = Aura
+theme = Dracula
+
 window-decoration = false
 window-padding-x = 10
 window-padding-y = 10
 
+background-opacity = 0.8
+
+font-family = "Hack"
 font-size = 10
 
 keybind = ctrl+shift+r=reload_config

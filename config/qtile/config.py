@@ -35,13 +35,13 @@ from libqtile.utils import guess_terminal
 mod = "mod4"
 terminal = guess_terminal()
 
-myTerm = "wezterm"
+myTerm = "ghostty"
 myBrowser = "qutebrowser"
-myFileManager = "wezterm -e yazi"
-myMarkdown = "wezterm -e nvim"
+myFileManager = "ghostty -e yazi"
+myMarkdown = "ghostty -e nvim"
 myMusicPlayer = "spotify"
 myPDFReader = "zathura"
-myTextEditor = "wezterm -e nvim"
+myTextEditor = "ghostty -e nvim"
 
 @lazy.function
 def float_to_front(qtile):
