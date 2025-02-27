@@ -2168,6 +2168,8 @@ c.url.searchengines = {
     "aw": "https://wiki.archlinux.org/?search={}",
     "aur": "https://aur.archlinux.org/packages?O=0&K={}",
     "bm": "https://docs.blender.org/manual/en/latest/search.html?q={}",
+    "vp": "https://voidlinux.org/packages/?arch=x86_64&q={}",
+    "vd": "https://docs.voidlinux.org/?search={}",
 }
 
 ## Page(s) to open at the start.
