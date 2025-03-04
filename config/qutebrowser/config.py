@@ -1227,7 +1227,7 @@ c.downloads.location.remember = True
 ## Same as `{column}`, but starting from index 0.
 ## Type: ShellCommand
 # c.editor.command = ['gvim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
-c.editor.command = ["wezterm", "-e", "nvim", "{file}"]
+c.editor.command = ["ghostty", "-e", "nvim", "{file}"]
 
 ## Encoding to use for the editor.
 ## Type: Encoding
@@ -1244,7 +1244,7 @@ c.editor.command = ["wezterm", "-e", "nvim", "{file}"]
 ## argument, the   standard output of the command is read instead.
 ## Type: ShellCommand
 # c.fileselect.folder.command = ['xterm', '-e', 'ranger', '--choosedir={}']
-c.fileselect.folder.command = ["wezterm", "-e", "nnn", "-p", "{}"]
+c.fileselect.folder.command = ["ghostty", "-e", "nnn", "-p", "{}"]
 
 ## Handler for selecting file(s) in forms. If `external`, then the
 ## commands specified by `fileselect.single_file.command`,
@@ -1265,7 +1265,7 @@ c.fileselect.handler = "external"
 ## read instead.
 ## Type: ShellCommand
 # c.fileselect.multiple_files.command = ['xterm', '-e', 'ranger', '--choosefiles={}']
-c.fileselect.multiple_files.command = ["wezterm", "-e", "nnn", "-p", "{}"]
+c.fileselect.multiple_files.command = ["ghostty", "-e", "nnn", "-p", "{}"]
 
 ## Command (and arguments) to use for selecting a single file in forms.
 ## The command should write the selected file path to the specified file
@@ -1274,7 +1274,7 @@ c.fileselect.multiple_files.command = ["wezterm", "-e", "nnn", "-p", "{}"]
 ## standard output of the command is read instead.
 ## Type: ShellCommand
 # c.fileselect.single_file.command = ['xterm', '-e', 'ranger', '--choosefile={}']
-c.fileselect.single_file.command = ["wezterm", "-e", "nnn", "-p", "{}"]
+c.fileselect.single_file.command = ["ghostty", "-e", "nnn", "-p", "{}"]
 
 ## Font used in the completion categories.
 ## Type: Font
