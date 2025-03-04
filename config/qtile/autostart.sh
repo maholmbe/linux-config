@@ -9,7 +9,7 @@ picom -b
 nitrogen --restore 
 dunst &
 flameshot &
-#blueman-applet &
+blueman-applet &
 #kdeconnect-indicator &
 copyq &
 #system-config-printer-applet &
