@@ -1,0 +1,1 @@
+keybindings Alt+Meta+1:type:username:tab:password,Alt+Meta+2:type:username,Alt+Meta+3:type:password,Alt+Meta+4:type:totp,Alt+Meta+c:copy:password,Alt+Meta+u:copy:username,Alt+Meta+t:copy:totp,Alt+Meta+m::menu
