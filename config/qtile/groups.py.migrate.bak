@@ -2,20 +2,19 @@ from libqtile.config import EzKey as Key, Group, Match, ScratchPad, DropDown
 from libqtile.lazy import lazy
 
 from keys import keys
-import re
 
 
 groups = [
-    Group("1.WEB", layout="max", matches=[Match(wm_class=re.compile(r"^(firefox|vivaldi-stable|qutebrowser)$"))]),
-    Group("2.MUSIC", layout="bsp", matches=[Match(wm_class=re.compile(r"^(Spotify|Slack)$"))]),
+    Group("1.WEB", layout="max", matches=[Match(wm_class=["firefox", "vivaldi-stable", "qutebrowser"])]),
+    Group("2.MUSIC", layout="bsp", matches=[Match(wm_class=["Spotify", "Slack"])]),
     Group("3.EMAIL", layout="max", spawn=["kitty -e aerc"]),
     Group("4.FILE", layout="bsp", spawn=["kitty -e nnn -de"]),
     Group("5.DEV", layout="bsp", spawn=["kitty -e nvim"]),
     Group("6.TERM", layout="bsp", spawn=["kitty"]),
-    Group("7.GFX", layout="bsp", matches=[Match(wm_class=re.compile(r"^(Inkscape|krita|Gimp-2.10)$"))]),
-    Group("8.3D", layout="bsp", matches=[Match(wm_class=re.compile(r"^(FreeCAD|Blender)$"))]),
-    Group("9.COMP", layout="bsp", matches=[Match(title=re.compile(r"^(Fusion Studio)$"))]),
-    Group("10.EDIT", layout="bsp", matches=[Match(wm_class=re.compile(r"^(resolve)$"))]),
+    Group("7.GFX", layout="bsp", matches=[Match(wm_class=["Inkscape", "krita", "Gimp-2.10"])]),
+    Group("8.3D", layout="bsp", matches=[Match(wm_class=["FreeCAD", "Blender"])]),
+    Group("9.COMP", layout="bsp", matches=[Match(title=["Fusion Studio"])]),
+    Group("10.EDIT", layout="bsp", matches=[Match(wm_class=["resolve"])]),
     Group("F1.GFX_2", layout="bsp"),
     Group("F2.3D_2", layout="bsp"),
     Group("F3.COMP_2", layout="bsp"),

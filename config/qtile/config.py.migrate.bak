@@ -31,7 +31,6 @@ from libqtile import bar, layout, qtile, widget, hook
 from libqtile.config import EzKey as Key, EzClick as Click, EzDrag as Drag, Group, Match, Screen, ScratchPad, DropDown
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
-import re
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -50,7 +49,7 @@ def float_to_front(qtile):
     for group in qtile.groups:
         for window in group.windows:
             if window.floating:
-                window.bring_to_front()
+                window.cmd_bring_to_front()
 
 keys = [
     # Qtile Controls
@@ -135,16 +134,16 @@ keys = [
 ]
 
 groups = [
-    Group("1", layout="max", matches=[Match(wm_class=re.compile(r"^(firefox|vivaldi-stable|qutebrowser)$"))]),
-    Group("2", layout="bsp", matches=[Match(wm_class=re.compile(r"^(Spotify|Slack)$"))]),
+    Group("1", layout="max", matches=[Match(wm_class=["firefox", "vivaldi-stable", "qutebrowser"])]),
+    Group("2", layout="bsp", matches=[Match(wm_class=["Spotify", "Slack"])]),
     Group("3", layout="max", spawn=["ghostty -e aerc"]),
     Group("4", layout="bsp", spawn=["ghostty -e yazi"]),
     Group("5", layout="bsp"),
     Group("6", layout="bsp", spawn=["ghostty"]),
-    Group("7", layout="bsp", matches=[Match(wm_class=re.compile(r"^(Inkscape|krita|Gimp-2.10)$"))]),
-    Group("8", layout="bsp", matches=[Match(wm_class=re.compile(r"^(FreeCAD|Blender)$"))]),
-    Group("9", layout="bsp", matches=[Match(title=re.compile(r"^(Fusion Studio)$"))]),
-    Group("10", layout="bsp", matches=[Match(wm_class=re.compile(r"^(resolve)$"))]),
+    Group("7", layout="bsp", matches=[Match(wm_class=["Inkscape", "krita", "Gimp-2.10"])]),
+    Group("8", layout="bsp", matches=[Match(wm_class=["FreeCAD", "Blender"])]),
+    Group("9", layout="bsp", matches=[Match(title=["Fusion Studio"])]),
+    Group("10", layout="bsp", matches=[Match(wm_class=["resolve"])]),
     Group("F1", layout="bsp"),
     Group("F2", layout="bsp"),
     Group("F3", layout="bsp"),
