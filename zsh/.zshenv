@@ -11,7 +11,7 @@ export SVDIR="/home/mats/service"
 
 export PATH="$PATH:/home/mats/.local/bin"
 
-export TERM="ghostty"
+export TERM="xterm-256color"
 export EDITOR="nvim"
 
 #Prime render offload needs these apparently (the number indicates the device ID so check it with 'xrandr --listproviders')
