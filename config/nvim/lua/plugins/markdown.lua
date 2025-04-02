@@ -32,8 +32,8 @@ return {
     opts = {
       workspaces = {
         {
-          name = "brainless",
-          path = "~/git-repos/brainless",
+          name = "oblivion",
+          path = "~/oblivion",
         },
         -- {
         --   name = "work",
