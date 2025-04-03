@@ -6,12 +6,12 @@ pipewire &
 /usr/libexec/polkit-gnome-authentication-agent-1 &
 numlockx on
 picom -b
-nitrogen --restore 
+nitrogen --restore
 dunst &
 flameshot &
 blueman-applet &
 #kdeconnect-indicator &
-copyq &
+#copyq &
 #system-config-printer-applet &
 udiskie --tray &
 solaar --window hide &
