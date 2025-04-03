@@ -112,6 +112,8 @@ rclone-1.69.0_1
 ripgrep-14.1.1_1
 rofi-1.7.8_1
 rofi-rbw-1.4.2_2
+socklog-void-20200115_2
+sof-firmware-2025.01_1
 starship-1.22.1_1
 strace-6.13_1
 subversion-1.14.2_7
@@ -134,6 +136,7 @@ void-repo-nonfree-9_6
 w3m-0.5.3+git20230121_2
 wget-1.25.0_1
 wireguard-0.0.20191226_1
+wireplumber-elogind-0.5.6_1
 xclip-0.13_2
 xdg-desktop-portal-1.18.4_1
 xdg-desktop-portal-gtk-1.15.3_1
