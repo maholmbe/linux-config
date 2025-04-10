@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=FreeCAD appimage
-Exec=/opt/appimages/freecad.appimage %f
-Icon=./freecad.svg
+Name=Obsidian appimage
+Exec=/opt/appimages/Obsidian-1.8.9.AppImage %f
+Icon=./obsidian-icon.svg
 Terminal=false
 Type=Application
 PrefersNonDefaultGPU=true
