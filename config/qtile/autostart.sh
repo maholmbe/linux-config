@@ -17,7 +17,7 @@ udiskie --tray &
 solaar --window hide &
 #rclone-browser &
 #aw-qt &    <--ActivityWatch
-qutebrowser &
+qutebrowser_container_start gmail &
 syncthing &
 nm-applet &
 #syncthingtray &
