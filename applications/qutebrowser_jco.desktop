@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Qutebrowser-jco-container
+Exec=qutebrowser_container_start jco
+Terminal=false
+Type=Application

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+GMAIL="$HOME/.qutebrowser_containers/gmail"
+ARTFLOW="$HOME/.qutebrowser_containers/artflow"
+JCO="$HOME/.qutebrowser_containers/jco"
+
+# Create base dir if it doesn't exist.
+if [ ! -d "$GMAIL" ]; then
+  mkdir "$GMAIL"
+fi
+if [ ! -d "$ARTFLOW" ]; then
+  mkdir "$ARTFLOW"
+fi
+if [ ! -d "$JCO" ]; then
+  mkdir "$JCO"
+fi

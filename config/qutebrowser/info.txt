@@ -1,3 +1,0 @@
-To make container userscripts work you should copy/link them to /usr/share/qutebrowser/userscripts/
-
-Otherwise they will only work outside the containers.

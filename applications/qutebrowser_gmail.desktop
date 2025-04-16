@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Qutebrowser-gmail-container
+Exec=qutebrowser_container_start gmail
+Terminal=false
+Type=Application

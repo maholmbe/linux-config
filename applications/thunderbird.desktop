@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Thinderbird
+Name=Thunderbird
 Exec=/opt/thunderbird/thunderbird %f
 Terminal=false
 Type=Application

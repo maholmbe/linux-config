@@ -1,0 +1,19 @@
+#!/bin/sh
+
+CONFIG_FILE="$HOME/.config/qutebrowser/config.py"
+
+GMAIL="$HOME/.qutebrowser_containers/gmail"
+ARTFLOW="$HOME/.qutebrowser_containers/artflow"
+JCO="$HOME/.qutebrowser_containers/jco"
+
+if [ "$1" = "gmail" ]; then
+  qutebrowser -B "$GMAIL" -C "$CONFIG_FILE" -s window.title_format " {perc}[$1]{title_sep}{current_title}" "$URL"
+fi
+
+if [ "$1" = "artflow" ]; then
+  qutebrowser -B "$ARTFLOW" -C "$CONFIG_FILE" -s window.title_format " {perc}[$1]{title_sep}{current_title}" "$URL"
+fi
+
+if [ "$1" = "jco" ]; then
+  qutebrowser -B "$JCO" -C "$CONFIG_FILE" -s window.title_format " {perc}[$1]{title_sep}{current_title}" "$URL"
+fi
