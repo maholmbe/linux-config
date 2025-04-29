@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Arch-nvidia
+GenericName=Terminal entering Arch-nvidia
+Comment=Terminal entering Arch-nvidia
+Categories=Distrobox;System;Utility
+Exec=/usr/local/bin/distrobox enter  arch-nvidia
+Icon=/home/mats/.local/share/icons/distrobox/arch.png
+Keywords=distrobox;
+NoDisplay=false
+Terminal=true
+TryExec=/usr/local/bin/distrobox
+Type=Application
+Actions=Remove;
+
+[Desktop Action Remove]
+Name=Remove Arch-nvidia from system
+Exec=/usr/local/bin/distrobox rm  arch-nvidia

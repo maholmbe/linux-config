@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Plasticity (on ubuntu-nvidia)
+Comment=Plasticity: CAD for artists
+GenericName=Plasticity (on ubuntu-nvidia)
+Exec=/usr/local/bin/distrobox-enter  -n ubuntu-nvidia  --   plasticity  %U 
+Icon=plasticity
+Type=Application
+StartupNotify=true
+Categories=Graphics;
+MimeType=application/x-plasticity;model/obj;model/stl;model/step;model/iges;application/x-3dm;
+
+StartupWMClass=Plasticity

@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Rocky-nvidia
+GenericName=Terminal entering Rocky-nvidia
+Comment=Terminal entering Rocky-nvidia
+Categories=Distrobox;System;Utility
+Exec=/usr/local/bin/distrobox enter  rocky-nvidia
+Icon=/home/mats/.local/share/icons/distrobox/rocky.png
+Keywords=distrobox;
+NoDisplay=false
+Terminal=true
+TryExec=/usr/local/bin/distrobox
+Type=Application
+Actions=Remove;
+
+[Desktop Action Remove]
+Name=Remove Rocky-nvidia from system
+Exec=/usr/local/bin/distrobox rm  rocky-nvidia
