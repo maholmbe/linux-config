@@ -55,6 +55,10 @@ static const char *colors[][3]      = {
     [SchemeTag3]       = { orange,  black,  black },
     [SchemeTag4]       = { green,   black,  black },
     [SchemeTag5]       = { pink,    black,  black },
+    [SchemeTag6]       = { blue,    black,  black },
+    [SchemeTag7]       = { red,     black,  black },
+    [SchemeTag8]       = { orange,  black,  black },
+    [SchemeTag9]       = { green,   black,  black },
     [SchemeLayout]     = { green,   black,  black },
     [SchemeBtnPrev]    = { green,   black,  black },
     [SchemeBtnNext]    = { yellow,  black,  black },
@@ -62,7 +66,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static char *tags[] = {"", "", "", "", ""};
+static char *tags[] = {"", "", "", "󰎆", "", "", "", "󰂫", ""};
 
 static const char* eww[] = { "eww", "open" , "eww", NULL };
 
@@ -72,7 +76,7 @@ static const Launcher launchers[] = {
 };
 
 static const int tagschemes[] = {
-    SchemeTag1, SchemeTag2, SchemeTag3, SchemeTag4, SchemeTag5
+    SchemeTag1, SchemeTag2, SchemeTag3, SchemeTag4, SchemeTag5, SchemeTag6, SchemeTag7, SchemeTag8, SchemeTag9
 };
 
 static const unsigned int ulinepad      = 5; /* horizontal padding between the underline and tag */
@@ -85,10 +89,12 @@ static const Rule rules[] = {
      *	WM_CLASS(STRING) = instance, class
      *	WM_NAME(STRING) = title
      */
-    /* class      instance    title       tags mask     iscentered   isfloating   monitor */
-    { "Gimp",     NULL,       NULL,       0,            0,           1,           -1 },
-    { "Firefox",  NULL,       NULL,       1 << 8,       0,           0,           -1 },
-    { "eww",      NULL,       NULL,       0,            0,           1,           -1 },
+    /* class      instance    title               tags mask     iscentered   isfloating   monitor */
+    { "Gimp",     NULL,       NULL,               1 << 6,       0,           0,           -1 },
+    { "Firefox",  NULL,       NULL,               1 << 8,       0,           0,           -1 },
+    { "eww",      NULL,       NULL,               0,            0,           1,           -1 },
+    { "Blender",  NULL,       "Preferences",      1 << 7,       0,           1,           -1 },
+    { "Blender",  NULL,       NULL,               1 << 7,       0,           0,           -1 },
 };
 
 /* layout(s) */
@@ -151,6 +157,8 @@ static const Key keys[] = {
 
     { MODKEY,                           XK_c,       spawn,          SHCMD("rofi -show drun") },
     { MODKEY,                           XK_Return,  spawn,          SHCMD("ghostty")},
+    { MODKEY|ControlMask,               XK_Return,  spawn,          SHCMD("ghostty -e yazi")},
+    { MODKEY|ControlMask,               XK_l,       spawn,          SHCMD("betterlockscreen -l dimblur")},
 
     // toggle stuff
     { MODKEY,                           XK_b,       togglebar,      {0} },
@@ -227,7 +235,7 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,                 XK_w,       setborderpx,    {.i = default_border } },
 
     // kill dwm
-    { MODKEY|ControlMask,               XK_q,       spawn,        SHCMD("killall bar.sh chadwm") },
+    { MODKEY|ControlMask,               XK_q,       spawn,        SHCMD("killall -TERM qutebrowser && killall bar.sh chadwm") },
 
     // kill window
     { MODKEY,                           XK_q,       killclient,     {0} },
