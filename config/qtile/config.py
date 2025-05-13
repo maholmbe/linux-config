@@ -40,7 +40,7 @@ myTerm = "ghostty"
 myBrowser = "qutebrowser"
 myFileManager = "ghostty -e yazi"
 myMarkdown = "ghostty -e nvim"
-myMusicPlayer = "spotify"
+myMusicPlayer = "ghostty -e ncspot"
 myPDFReader = "zathura"
 myTextEditor = "ghostty -e nvim"
 
@@ -135,23 +135,21 @@ keys = [
 ]
 
 groups = [
-    Group("1", layout="max", matches=[Match(wm_class=re.compile(r"^(firefox|vivaldi-stable|qutebrowser)$"))]),
-    Group("2", layout="bsp", matches=[Match(wm_class=re.compile(r"^(Spotify|Slack)$"))]),
-    Group("3", layout="max", spawn=["ghostty -e aerc"]),
-    Group("4", layout="bsp", spawn=["ghostty -e yazi"]),
-    Group("5", layout="bsp"),
-    Group("6", layout="bsp", spawn=["ghostty"]),
-    Group("7", layout="bsp", matches=[Match(wm_class=re.compile(r"^(Inkscape|krita|Gimp-2.10)$"))]),
-    Group("8", layout="bsp", matches=[Match(wm_class=re.compile(r"^(FreeCAD|Blender)$"))]),
-    Group("9", layout="bsp", matches=[Match(title=re.compile(r"^(Fusion Studio)$"))]),
-    Group("10", layout="bsp", matches=[Match(wm_class=re.compile(r"^(resolve)$"))]),
-    Group("F1", layout="bsp"),
-    Group("F2", layout="bsp"),
-    Group("F3", layout="bsp"),
-    Group("F4", layout="bsp")
+    Group("1", layout="max", matches=[Match(wm_class=re.compile(r"^(firefox|vivaldi-stable|qutebrowser)$"))], label=""),
+    Group("2", layout="max", matches=[Match(wm_class=re.compile(r"^(Thunderbird)$"))], label="󰇮"),
+    Group("3", layout="max", matches=[Match(wm_class=re.compile(r"^(Slack)$"))], label=""),
+    Group("4", layout="bsp", spawn=["ghostty -e ncspot"], label="󰎆"),
+    Group("5", layout="bsp", spawn=["ghostty -e yazi"], label=""),
+    Group("6", layout="bsp", spawn=["ghostty"], label=""),
+    Group("7", layout="bsp", matches=[Match(wm_class=re.compile(r"^(Inkscape)$"))], label=""),
+    Group("8", layout="bsp", matches=[Match(wm_class=re.compile(r"^(krita|Gimp)$"))], label=""),
+    Group("9", layout="bsp", matches=[Match(title=re.compile(r"^(FreeCAD|Blender)$"))], label="󰂫"),
+    Group("10", layout="bsp", label="󰂫"), 
+    Group("11", layout="bsp", matches=[Match(wm_class=re.compile(r"^(Fusion Studio|resolve)$"))], label=""),
+    Group("12", layout="bsp", label="") 
 ]
 
-for k, group in zip(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<F1>", "<F2>", "<F3>", "<F4>"], groups):
+for k, group in zip(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<F1>", "<F2>"], groups):
     keys.append(Key("M-"+(k), lazy.group[group.name].toscreen(0)))   # Switch group on screen 0
     keys.append(Key("M-C-"+(k), lazy.group[group.name].toscreen(1)))  # Switch group on screen 1
     keys.append(Key("M-S-"+(k), lazy.window.togroup(group.name)))  # Send current window to another group
@@ -193,8 +191,8 @@ layouts = [
 
 widget_defaults = dict(
     font="Hack Nerd Font",
-    fontsize=12,
-    padding=3,
+    fontsize=14,
+    padding=5,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -216,7 +214,7 @@ widgets_secondary = [
     
     widget.CurrentLayoutIcon(**widget_defaults),
     widget.CurrentLayout(**widget_defaults),
-    widget.GroupBox(disable_drag=True, highlight_method="block", **widget_defaults),
+    widget.GroupBox(disable_drag=True, highlight_method="block", font="Hakc Nerd Font Mono", fontsize=16, padding=5),
     widget.TaskList(borderwidth=1, **widget_defaults),
 #    widget.Chord(
 #        chords_colors={
@@ -232,7 +230,7 @@ widgets_secondary = [
     widget.Spacer(length=30, **widget_defaults),
 ]
 
-def status_bar(widgets): return bar.Bar(widgets, 24, opacity=0.8)
+def status_bar(widgets): return bar.Bar(widgets, 24, opacity=1)
 
 connected_monitors = subprocess.run(
     "xrandr | grep 'connected' | cut -d ' ' -f 2",
@@ -305,6 +303,11 @@ reconfigure_screens = True
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call(home)
+
+# Quit qutebrowser instances cleanly before closing Qtile
+@hook.subscribe.shutdown
+def close_apps():
+    lazy.spawn("killall -TERM qutebrowser")
 
 # If things like steam games want to auto-minimize themselves when losing
 # focus, should we respect this or not?

@@ -10,16 +10,12 @@ nitrogen --restore
 dunst &
 flameshot &
 blueman-applet &
-#kdeconnect-indicator &
-#copyq &
-#system-config-printer-applet &
 udiskie --tray &
 solaar --window hide &
-#rclone-browser &
-#aw-qt &    <--ActivityWatch
 qutebrowser_container_start gmail &
 syncthing &
 nm-applet &
+#system-config-printer-applet &
+#aw-qt &    <--ActivityWatch
+#rclone-browser &
 #syncthingtray &
-# wal -i ~/git-repos/dotfiles/wallpapers/legion
-# wal -R
