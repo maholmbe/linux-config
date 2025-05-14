@@ -66,7 +66,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static char *tags[] = {"", "", "", "󰎆", "", "", "", "󰂫", ""};
+static char *tags[] = {"", "", "", "󰎆", "", "", "", "", "󰂫", ""};
 
 static const char* eww[] = { "eww", "open" , "eww", NULL };
 
@@ -76,7 +76,7 @@ static const Launcher launchers[] = {
 };
 
 static const int tagschemes[] = {
-    SchemeTag1, SchemeTag2, SchemeTag3, SchemeTag4, SchemeTag5, SchemeTag6, SchemeTag7, SchemeTag8, SchemeTag9
+    SchemeTag1, SchemeTag2, SchemeTag3, SchemeTag4, SchemeTag5, SchemeTag6, SchemeTag7, SchemeTag8, SchemeTag9, SchemeTag1
 };
 
 static const unsigned int ulinepad      = 5; /* horizontal padding between the underline and tag */
@@ -90,11 +90,13 @@ static const Rule rules[] = {
      *	WM_NAME(STRING) = title
      */
     /* class      instance    title               tags mask     iscentered   isfloating   monitor */
-    { "Gimp",     NULL,       NULL,               1 << 6,       0,           0,           -1 },
-    { "Firefox",  NULL,       NULL,               1 << 8,       0,           0,           -1 },
+    { "Gimp",     NULL,       NULL,               1 << 7,       0,           0,           -1 },
     { "eww",      NULL,       NULL,               0,            0,           1,           -1 },
-    { "Blender",  NULL,       "Preferences",      1 << 7,       0,           1,           -1 },
-    { "Blender",  NULL,       NULL,               1 << 7,       0,           0,           -1 },
+    { "Blender",  NULL,       NULL,               1 << 8,       0,           0,           -1 },
+    { "Slack",    NULL,       NULL,               1 << 2,       0,           0,           -1 },
+    { "Inkscape", NULL,       NULL,               1 << 6,       0,           0,           -1 },
+    { "Fusion",   NULL,       NULL,               1 << 9,       0,           0,           -1 },
+    { "resolve",  NULL,       NULL,               1 << 9,       0,           0,           -1 },
 };
 
 /* layout(s) */
@@ -156,7 +158,7 @@ static const Key keys[] = {
         SHCMD("maim --select | xclip -selection clipboard -t image/png")},
 
     { MODKEY,                           XK_c,       spawn,          SHCMD("rofi -show drun") },
-    { MODKEY,                           XK_Return,  spawn,          SHCMD("ghostty")},
+    { MODKEY,                           XK_Return,  spawn,          SHCMD("st")},
     { MODKEY|ControlMask,               XK_Return,  spawn,          SHCMD("ghostty -e yazi")},
     { MODKEY|ControlMask,               XK_l,       spawn,          SHCMD("betterlockscreen -l dimblur")},
 
@@ -222,8 +224,8 @@ static const Key keys[] = {
     { MODKEY,                           XK_space,   setlayout,      {0} },
     { MODKEY|ControlMask,               XK_comma,   cyclelayout,    {.i = -1 } },
     { MODKEY|ControlMask,               XK_period,  cyclelayout,    {.i = +1 } },
-    { MODKEY,                           XK_0,       view,           {.ui = ~0 } },
-    { MODKEY|ShiftMask,                 XK_0,       tag,            {.ui = ~0 } },
+    { MODKEY,                           XK_F1,       view,           {.ui = ~0 } },
+    { MODKEY|ShiftMask,                 XK_F1,       tag,            {.ui = ~0 } },
     { MODKEY,                           XK_comma,   focusmon,       {.i = -1 } },
     { MODKEY,                           XK_period,  focusmon,       {.i = +1 } },
     { MODKEY|ShiftMask,                 XK_comma,   tagmon,         {.i = -1 } },
@@ -235,7 +237,7 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,                 XK_w,       setborderpx,    {.i = default_border } },
 
     // kill dwm
-    { MODKEY|ControlMask,               XK_q,       spawn,        SHCMD("killall -TERM qutebrowser && killall bar.sh chadwm") },
+    { MODKEY|ControlMask,               XK_q,       spawn,        SHCMD("killall -TERM qutebrowser && sleep 3 && killall bar.sh chadwm") },
 
     // kill window
     { MODKEY,                           XK_q,       killclient,     {0} },
@@ -256,6 +258,7 @@ static const Key keys[] = {
     TAGKEYS(                            XK_7,                       6)
     TAGKEYS(                            XK_8,                       7)
     TAGKEYS(                            XK_9,                       8)
+    TAGKEYS(                            XK_0,                       9)
 };
 
 /* button definitions */

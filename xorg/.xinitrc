@@ -45,5 +45,5 @@ setxkbmap fi       #fix for xdotool bug (corrects keyboard layout)
 xset r rate 300 50 #key repeat (xset r rate delay Hz)
 
 #exec qtile start
-exec dbus-run-session -- qtile start
-#exec dbus-run-session -- ~/.config/chadwm/scripts/run.sh
+#exec dbus-run-session -- qtile start
+exec dbus-run-session -- ~/.config/chadwm/scripts/run.sh
