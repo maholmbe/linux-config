@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Kitsas 5.9
+Icon=/home/mats/.local/share/icons/Kitsas.png
+Exec=/tmp/.mount_KitsasFcHbEM/usr/bin/kitsas
+TryExec=/tmp/.mount_KitsasFcHbEM/usr/bin/kitsas
+GenericName=Kirjanpito
+Comment=Avoimen lähdekoodin kirjanpitäjä
+Categories=Office;Finance;Qt;
+MimeType=application/kitsas
+Terminal=false
