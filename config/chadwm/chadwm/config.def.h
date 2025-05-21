@@ -161,6 +161,8 @@ static const Key keys[] = {
     { MODKEY,                           XK_Return,  spawn,          SHCMD("st")},
     { MODKEY|ControlMask,               XK_Return,  spawn,          SHCMD("ghostty -e yazi")},
     { MODKEY|ControlMask,               XK_l,       spawn,          SHCMD("betterlockscreen -l dimblur")},
+    { MODKEY|ShiftMask,                 XK_b,       spawn,          SHCMD("rbw-artflow.sh")},
+    { MODKEY|ShiftMask|ControlMask,     XK_b,       spawn,          SHCMD("rbw-jco.sh")},
 
     // toggle stuff
     { MODKEY,                           XK_b,       togglebar,      {0} },
