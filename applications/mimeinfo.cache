@@ -1,4 +1,5 @@
 [MIME Cache]
+application/kitsas=Kitsas.desktop;
 application/x-3dm=ubuntu-nvidia-plasticity.desktop;
 application/x-blender=blender.desktop;
 application/x-plasticity=ubuntu-nvidia-plasticity.desktop;
@@ -6,3 +7,4 @@ model/iges=ubuntu-nvidia-plasticity.desktop;
 model/obj=ubuntu-nvidia-plasticity.desktop;
 model/step=ubuntu-nvidia-plasticity.desktop;
 model/stl=ubuntu-nvidia-plasticity.desktop;
+x-scheme-handler/joplin=appimagekit-joplin.desktop;

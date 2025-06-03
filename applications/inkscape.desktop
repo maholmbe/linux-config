@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Inkscape
+Name=Inkscape appimage
 Exec=/opt/appimages/inkscape.appimage %f
 Icon=/home/mats/.local/share/applications/inkscape.svg
 Terminal=false
