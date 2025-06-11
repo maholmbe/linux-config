@@ -18,6 +18,7 @@ udiskie --tray &
 solaar --window hide &
 qutebrowser_container_start gmail &
 syncthing &
+nm-applet &
 
 dash ~/.config/chadwm/scripts/bar.sh &
 while type chadwm >/dev/null; do chadwm && continue || break; done
