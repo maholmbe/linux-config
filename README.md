@@ -1,2 +1,2 @@
-# arch-conf
-My Void Linux config
+# Void config
+My Void Linux config in a semi random state
