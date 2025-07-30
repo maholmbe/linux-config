@@ -81,7 +81,7 @@ static const int tagschemes[] = {
 
 static const unsigned int ulinepad      = 5; /* horizontal padding between the underline and tag */
 static const unsigned int ulinestroke   = 2; /* thickness / height of the underline */
-static const unsigned int ulinevoffset  = 0; /* how far above the bottom of the bar the line should appear */
+static const unsigned int ulinevoffset  = 2; /* how far above the bottom of the bar the line should appear */
 static const int ulineall               = 0; /* 1 to show underline on all tags, 0 for just the active ones */
 
 static const Rule rules[] = {
@@ -145,11 +145,15 @@ static const Key keys[] = {
     /* modifier                         key         function        argument */
 
     // brightness and audio 
-    {0,             XF86XK_AudioLowerVolume,    spawn, {.v = downvol}},
-	{0,             XF86XK_AudioMute, spawn,    {.v = mutevol }},
-	{0,             XF86XK_AudioRaiseVolume,    spawn, {.v = upvol}},
-	{0,				XF86XK_MonBrightnessUp,     spawn,	{.v = light_up}},
-	{0,				XF86XK_MonBrightnessDown,   spawn,	{.v = light_down}},
+    {0,       XF86XK_AudioLowerVolume,    spawn,  {.v = downvol}},
+	  {0,       XF86XK_AudioMute,           spawn,  {.v = mutevol }},
+	  {0,       XF86XK_AudioRaiseVolume,    spawn,  {.v = upvol}},
+	  {0,				XF86XK_MonBrightnessUp,     spawn,  {.v = light_up}},
+	  {0,				XF86XK_MonBrightnessDown,   spawn,  {.v = light_down}},
+
+    {0,       XF86XK_AudioPlay,            spawn,  SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")},
+    {0,       XF86XK_AudioNext,            spawn,  SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next")},
+    {0,       XF86XK_AudioPrev,            spawn,  SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous")},
 
     // screenshot fullscreen and cropped
     {MODKEY|ControlMask,                XK_u,       spawn,
