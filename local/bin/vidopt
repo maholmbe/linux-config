@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Check if an input file was given
+if [ -z "$1" ]; then
+  echo "Usage: vidopt inputfile"
+  exit 1
+fi
+
+input="$1"
+# Remove extension and append .mp4
+output="${input%.*}.mp4"
+
+# Run ffmpeg with your settings
+ffmpeg -i "$input" \
+  -c:v libx264 \
+  -pix_fmt yuv420p \
+  -profile:v high \
+  -preset slow \
+  -maxrate 8M \
+  -bufsize 2M \
+  -movflags +faststart \
+  -c:a aac \
+  -b:a 160k \
+  "$output"
