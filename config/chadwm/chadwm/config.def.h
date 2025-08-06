@@ -151,9 +151,9 @@ static const Key keys[] = {
 	  {0,				XF86XK_MonBrightnessUp,     spawn,  {.v = light_up}},
 	  {0,				XF86XK_MonBrightnessDown,   spawn,  {.v = light_down}},
 
-    {0,       XF86XK_AudioPlay,            spawn,  SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")},
-    {0,       XF86XK_AudioNext,            spawn,  SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next")},
-    {0,       XF86XK_AudioPrev,            spawn,  SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous")},
+    {0,       XF86XK_AudioPlay,            spawn,  SHCMD("playerctl --player=ncspot,spotify,chromium play-pause")},
+    {0,       XF86XK_AudioNext,            spawn,  SHCMD("playerctl --player=ncspot,spotify,chromium next")},
+    {0,       XF86XK_AudioPrev,            spawn,  SHCMD("playerctl --player=ncspot,spotify,chromium previous")},
 
     // screenshot fullscreen and cropped
     {MODKEY|ControlMask,                XK_u,       spawn,
