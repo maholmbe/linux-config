@@ -17,6 +17,7 @@ blueman-applet &
 udiskie --tray &
 solaar --window hide &
 qutebrowser_container_start gmail &
+qutebrowser_container_start jco &
 syncthing &
 nm-applet &
 
