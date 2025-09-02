@@ -1,0 +1,3 @@
+[tasks]
+image_alloc      = 536870912  # 512MB
+image_bound      = [ 10000, 10000 ]

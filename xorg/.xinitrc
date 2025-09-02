@@ -39,7 +39,7 @@ fi
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-export XDG_CURRENT_DESKTOP=qtile
+export XDG_CURRENT_DESKTOP=dwm
 
 setxkbmap fi       #fix for xdotool bug (corrects keyboard layout)
 xset r rate 300 50 #key repeat (xset r rate delay Hz)

@@ -2,6 +2,8 @@
 #export QT_STYLE_OVERRIDE="kvantum"
 export QT_QPA_PLATFORMTHEME="qt6ct"
 
+export GTK_USE_PORTAL=1
+
 #https://wiki.archlinux.org/title/SSH_keys#Start_ssh-agent_with_systemd_user
 #export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
@@ -27,7 +29,7 @@ export OCIO=/opt/blender/4.5/datafiles/colormanagement/config.ocio
 export PYTHONTRACEMALLOC=1
 
 #nnn configuration
-export NNN_TERMINAL="wezterm"
+export NNN_TERMINAL="ghostty"
 export NNN_FIFO="/tmp/nnn.fifo"
 export NNN_TRASH="1"
 export NNN_PLUG="f:finder;o:fzopen;p:preview-tui;d:dragdrop;t:nmount;l:launch;m:mimelist;k:kdeconnect"

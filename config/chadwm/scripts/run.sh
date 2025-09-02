@@ -19,6 +19,7 @@ solaar --window hide &
 qutebrowser_container_start gmail &
 syncthing &
 nm-applet &
+/usr/libexec/xdg-desktop-portal-termfilechooser -r &
 
 dash ~/.config/chadwm/scripts/bar.sh &
 while type chadwm >/dev/null; do chadwm && continue || break; done
