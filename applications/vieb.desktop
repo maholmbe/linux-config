@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=Vieb
-Exec=/opt/vieb-12.4.0/vieb %f
+Exec=/opt/vieb/vieb %f
 Terminal=false
 Type=Application

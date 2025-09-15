@@ -1,0 +1,15 @@
+" Options
+set adblocker=update
+set devtoolsposition=split
+set downloadmethod=confirm
+set mapsuggestposition=bottomleft
+set permissioncamera=ask
+set permissiondisplaycapture=ask
+set permissionmediadevices=allow
+set permissionmicrophone=ask
+set permissionpersistentstorage=allow
+set redirecttohttp
+set useragent=%firefox
+set windowtitle="%title - %app"
+set colorscheme="verticaltabs"
+set containercolors=["^jco~yellow", "^artflow~red", "^personal~lime"]
