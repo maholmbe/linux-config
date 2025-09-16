@@ -1,4 +1,3 @@
-" Options
 set adblocker=update
 set devtoolsposition=split
 set downloadmethod=confirm
@@ -11,5 +10,6 @@ set permissionpersistentstorage=allow
 set redirecttohttp
 set useragent=%firefox
 set windowtitle="%title - %app"
-set colorscheme="verticaltabs"
 set containercolors=["^jco~yellow", "^artflow~red", "^personal~lime"]
+
+colorscheme verticaltabs
