@@ -11,5 +11,8 @@ set redirecttohttp
 set useragent=%firefox
 set windowtitle="%title - %app"
 set containercolors=["^jco~yellow", "^artflow~red", "^personal~lime"]
+set menupage=globalasneeded
+set vimcommand="st -e nvim"
+set followlabelposition=insidetopleft
 
 colorscheme verticaltabs
