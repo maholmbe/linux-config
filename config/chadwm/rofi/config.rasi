@@ -12,7 +12,7 @@ configuration{
     display-drun: "   Apps ";
 }
 
-@theme "everblush"
+//@theme "everblush"
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;
@@ -96,3 +96,9 @@ button selected {
   background-color: @bg-col;
   text-color: @blue;
 }
+
+//@theme "/usr/share/rofi/themes/material.rasi"
+
+//@theme "/usr/share/rofi/themes/sidebar.rasi"
+
+@theme "/usr/share/rofi/themes/material.rasi"
