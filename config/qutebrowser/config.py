@@ -693,7 +693,7 @@ c.colors.webpage.preferred_color_scheme = "dark"
 
 ## Enable the ad/host blocker
 ## Type: Bool
-c.content.blocking.enabled = False
+c.content.blocking.enabled = True
 
 ## Block subdomains of blocked hosts. Note: If only a single subdomain is
 ## blocked but should be allowed, consider using
@@ -1244,7 +1244,8 @@ c.editor.command = ["ghostty", "-e", "nvim", "{file}"]
 ## argument, the   standard output of the command is read instead.
 ## Type: ShellCommand
 # c.fileselect.folder.command = ['xterm', '-e', 'ranger', '--choosedir={}']
-c.fileselect.folder.command = ["ghostty", "-e", "nnn", "-p", "{}"]
+# c.fileselect.folder.command = ["ghostty", "-e", "nnn", "-p", "{}"]
+c.fileselect.folder.command = ["kitty", "-e", "yazi", "--chooser-file={}"]
 
 ## Handler for selecting file(s) in forms. If `external`, then the
 ## commands specified by `fileselect.single_file.command`,
@@ -1265,7 +1266,8 @@ c.fileselect.handler = "external"
 ## read instead.
 ## Type: ShellCommand
 # c.fileselect.multiple_files.command = ['xterm', '-e', 'ranger', '--choosefiles={}']
-c.fileselect.multiple_files.command = ["ghostty", "-e", "nnn", "-p", "{}"]
+# c.fileselect.multiple_files.command = ["ghostty", "-e", "nnn", "-p", "{}"]
+c.fileselect.multiple_files.command = ["kitty", "-e", "yazi", "--chooser-file={}"]
 
 ## Command (and arguments) to use for selecting a single file in forms.
 ## The command should write the selected file path to the specified file
@@ -1274,7 +1276,8 @@ c.fileselect.multiple_files.command = ["ghostty", "-e", "nnn", "-p", "{}"]
 ## standard output of the command is read instead.
 ## Type: ShellCommand
 # c.fileselect.single_file.command = ['xterm', '-e', 'ranger', '--choosefile={}']
-c.fileselect.single_file.command = ["ghostty", "-e", "nnn", "-p", "{}"]
+# c.fileselect.single_file.command = ["ghostty", "-e", "nnn", "-p", "{}"]
+c.fileselect.single_file.command = ["kitty", "-e", "yazi", "--chooser-file={}"]
 
 ## Font used in the completion categories.
 ## Type: Font
