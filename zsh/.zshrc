@@ -43,6 +43,10 @@ znap prompt
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+wal-tile() {
+    wal -n -i "$@"
+    swaybg -i "$(< "${HOME}/.cache/wal/wal")" -m center
+}
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
