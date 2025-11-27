@@ -44,6 +44,25 @@ export XDG_CURRENT_DESKTOP=dwm
 setxkbmap fi       #fix for xdotool bug (corrects keyboard layout)
 xset r rate 300 50 #key repeat (xset r rate delay Hz)
 
+xbacklight -set 10 &
+xss-lock -- betterlockscreen -l &
+autorandr -c
+pipewire &
+/usr/libexec/polkit-gnome-authentication-agent-1 &
+numlockx on
+picom -b
+nitrogen --restore
+dunst &
+flameshot &
+blueman-applet &
+udiskie --tray &
+solaar --window hide &
+syncthing &
+nm-applet &
+/usr/libexec/xdg-desktop-portal-termfilechooser -r &
+slstatus &
+
 #exec qtile start
 #exec dbus-run-session -- qtile start
-exec dbus-run-session -- ~/.config/chadwm/scripts/run.sh
+#exec dbus-run-session -- ~/.config/chadwm/scripts/run.sh
+exec dbus-run-session -- dwm
