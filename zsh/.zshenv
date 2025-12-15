@@ -23,7 +23,7 @@ export EDITOR="nvim"
 #Expose local font directory to Fusion
 export FUSION_FONTS="/home/mats/.local/share/fonts"
 
-export OCIO=/opt/blender/4.5/datafiles/colormanagement/config.ocio
+#export OCIO=/opt/blender/4.5/datafiles/colormanagement/config.ocio
 
 #qtile shell needs this
 export PYTHONTRACEMALLOC=1
